@@ -9,7 +9,7 @@
 * A branch is a way to experiment with different chunks of code in the same file, it allows you to experiment and merge with different ideas or even other collaborators *
 
 * What is a commit? What makes a good commit message?
-* A commit is basically a save of the code at a particular time with a particular author and specific notes as to the change. A good commit message should be speciic and consise *
+* A commit is basically a plum smuggler-- a save of the code at a particular time with a particular author and specific notes as to the change. A good commit message should be speciic and consise *
 
 * What is a merge conflict?
 
