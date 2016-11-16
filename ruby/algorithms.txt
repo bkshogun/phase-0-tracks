@@ -1,0 +1,25 @@
+Assuming the robot knows where it has to go, it would essentially have to compare the numbers on the buttons to the floor number it has programmed. 
+
+If it is going to lucky floor #13, for example, the robot would have to identify through some visual imaging, which numbers are represented on the buttons. 
+
+if button_1 == 13, then push. If not, move on.
+
+To do that, we would have to initialize a counter to move on to the next number, which operation, if I remember correctly, is +=. 
+
+So, if it was determined the button for floor 1 does not equal 13 (which is does not), then one would be added to the counter and the robot would check to see if the botton for floor 2 equals 13. It does not, so it moves on, and so on until it reaches button 13. 
+
+When the robot incrementally comes to the button that equals 13, the conditions are met to push the button, and off to floor 13 it goes. 
+
+
+
+My "day job" is barteding in midtown NYC, so this is pretty straight forward. I recieve user input and produce a product, sometimes hundreds of time per day. In fact, my job could quite easily be transferred to a robot now that I think about it. 
+
+First, I would make all bottles, glassware and necessary equipment identifiable to the robot. I would have to program the robot to distinguish between say, vodka and rum, or club soda nad sprite. 
+
+I would request input from the user, ie, "What would you like to drink?"
+
+Robo-tender would run through his database of drinks, until the input matched an existing formula. Ex, if guest_drink == "vodka" && "soda"... well I guess I don't know the code for pick up and pour but I assume it can be done.
+
+If the user was a wiseguy and responded with he'd like a new Ferarri, robot would invoke the catch-all elsif and make threatening beeps and shakes until the unruly guest ran in terror.
+
+Robo-tender would return to the beginning of the program, and continue to run the cycle of input and output until a pre-determined "last call" is reached, hopefully around 10pm so he can go home and make sure his DBC work can be successfully completed and submitted by 10am Monday ;)
