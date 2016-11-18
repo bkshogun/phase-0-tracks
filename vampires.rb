@@ -31,6 +31,16 @@ else
 	insurance_result = "would not like to enroll in company insurance"
 end
 
+puts "Now we need some allergy information. Press 'enter' after each allergy listed. Whenever you are finished, type 'done'."
+allergy = gets.chomp
+until allergy == "done"
+	puts "Enter allergy"
+	if allergy == "sunshine"
+		puts == "Definitely a vampire. Thanks for your application, don't call us, and we won't call you either"
+		exit
+	end
+end 
+
 verify_age = (2016 - year_born)
 
 if vamp_name == "Drake Cula" || vamp_name == "Tu Fang"
