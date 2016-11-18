@@ -1,3 +1,9 @@
+puts "How many applicants will be entered?"
+num_of_applicants = gets.to_i
+couter = 0
+
+while counter <= num_of_applicants
+
 puts "What is your name?"
 vamp_name = gets.chomp
 
@@ -22,13 +28,13 @@ if insurance == "y"
 	insurance_result = "would like to enroll in company insurance"
 else
 	insurance = false
-	insurance_result = "would not not like to enroll in comapny insurance"
+	insurance_result = "would not like to enroll in company insurance"
 end
 
 verify_age = (2016 - year_born)
 
-if vamp_name == ("Drake Cula" || "Tu Fang")
-	puts "Applicant's age, galirc and insurance preferences are irrelevent because his name is #{vamp_name} and he is definitely a vampire"
+if vamp_name == "Drake Cula" || vamp_name == "Tu Fang"
+	puts "Applicant's age, garlic and insurance preferences are irrelevent because his name is #{vamp_name} and he is definitely a vampire"
 elsif (user_age == verify_age) && (garlic_bread || insurance)
 	puts "Applicant #{vamp_name} got his age right, #{garlic_result}, #{insurance_result} and is probably not a vampire"
 elsif (user_age != verify_age) && (!garlic_bread && !insurance)
@@ -38,3 +44,7 @@ elsif (user_age != verify_age) && (!garlic_bread || !insurance)
 else 
 	puts "Results inconclusive"
 end 		
+
+counter += 1 
+
+end
