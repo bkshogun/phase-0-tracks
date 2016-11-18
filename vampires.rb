@@ -1,8 +1,8 @@
 puts "How many applicants will be entered?"
 num_of_applicants = gets.to_i
-couter = 0
+counter = 0
 
-while counter <= num_of_applicants
+while counter < num_of_applicants
 
 puts "What is your name?"
 vamp_name = gets.chomp
