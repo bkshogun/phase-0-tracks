@@ -37,8 +37,8 @@ done = false
 until vamp_pos || done
 	puts "Next we'll need some allergy information. Enter allergies one at a time, type 'done' when finished"
 	allergy = gets.chomp
-	if allergy == "sun"
-  		puts "Thanks but no thanks"
+	if allergy == "sunshine"
+  		puts "Yikes... ok thanks for submitting allergies. Don't call us, and we won't call you either"
   		vamp_pos = true 
   	elsif allergy == "done"
   	done = true 
@@ -62,5 +62,7 @@ if vamp_pos == false
 end 		
 
 counter += 1 
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends"
 
 end
