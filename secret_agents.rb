@@ -14,5 +14,15 @@ password = gets.chomp
 index = 0
 =end 
 
+index = 0
 
+def encrypt("string")
+	while index < string.length
+	print string[index].next 
+	index += 1
+end 
+
+encrypt "abc"
+encrypt "zed"
+encrypt "bcd"
 
