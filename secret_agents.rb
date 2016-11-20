@@ -16,14 +16,14 @@ index = 0
 
 index = 0
 
+
 def encrypt(string)
-	while index < string.length
-	print string[index].next 
-	index += 1
+  index = 0 
+  while index < string.length 
+    string_enc = string[index].next
+    print string_enc
+    index += 1 
+  end 
 end 
 
-encrypt "abc"
-encrypt "zed"
-encrypt "bcd"
-
-end
+encrypt ("zed")
