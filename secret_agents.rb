@@ -16,7 +16,7 @@ index = 0
 
 index = 0
 
-def encrypt("string")
+def encrypt(string)
 	while index < string.length
 	print string[index].next 
 	index += 1
@@ -26,3 +26,4 @@ encrypt "abc"
 encrypt "zed"
 encrypt "bcd"
 
+end
