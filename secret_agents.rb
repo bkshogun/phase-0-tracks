@@ -14,16 +14,32 @@ password = gets.chomp
 index = 0
 =end 
 
-index = 0
-
+counter = 0
 
 def encrypt(string)
-  index = 0 
-  while index < string.length 
-    string_enc = string[index].next
+  counter = 0 
+  while counter < string.length 
+    string_enc = string[counter].next
+    	if string_enc == "aa" 
+    		string_enc = "a"
+    	end
     print string_enc
-    index += 1 
+    counter += 1 
   end 
 end 
 
+def decrypt(string)
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	alpha_reverse = alpha.reverse 
+	counter = 0 
+	while counter < string.length 
+  		string_enc = string[counter].next[-1]
+  		print string_enc
+  		counter += 1 
+  	end
+end 
+
+encrypt ("abc")
 encrypt ("zed")
+decrypt ("bcd")
+decrypt ("afe")
