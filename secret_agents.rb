@@ -22,7 +22,7 @@ def encrypt(string)
 end 
 
 def decrypt(string)
-	
+
 counter = 0
 	while counter < string.length
 		var1 = string[counter]
@@ -38,6 +38,9 @@ end
 
 
 encrypt ("abc")
+puts ""
 encrypt ("zed")
+puts ""
 decrypt ("bcd")
+puts "" 
 decrypt ("afe")
