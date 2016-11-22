@@ -39,38 +39,27 @@ counter = 0
 	print var2
 	counter += 1
 	end
-end 
-
-=begin
-until enc_dec_valid
-	puts "Greetings. Would you like to 'encode' or 'decode' a password?"
-	user_op = gets.chomp
-		if user_op == ("encode") or ("decode")
-			enc_dec_valid = true
-		else
-			puts "Invalid entry"
-			enc_dec_valid = false 
-		end 
-end 
-=end
+end
 
 enc_dec_valid = false 
 until enc_dec_valid
-	puts "Encode or decode"
+	puts "Greetings. Would you like to encrypt or decrypt your password?"
 	user_op = gets.chomp
-		if user_op == "encode" or user_op == "decode"
+		if user_op == "encrypt" or user_op == "decrypt"
 			enc_dec_valid = true
 		else 
-			puts "Encode or decode, asshole"
+			puts "Invalid entry. Please enter 'encrypt' or 'decrypt'"
 			enc_dec_valid = false
 		end
 end
 
 puts "Enter your password:"
 password = gets.chomp
-	if user_op == "encode"
+	if user_op == "encrypt"
+		print "Your encrypted password is: "
 		encrypt (password)
-		elsif user_op == "decode"
+		elsif user_op == "decrypt"
+			print "Your decrypted password is: "
 			decrypt (password)
 	end 		
 
