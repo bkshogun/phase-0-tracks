@@ -11,6 +11,10 @@
 # integer back to the coresponding letter in the string. It looks like this can be done with a
 # combination of the .ord and .chr functions
 
+# Release 5- Add An Interface: asking the user to encrypt or decrypt a password, used "gets" and run
+# some comparison code. User enters password as a string, would be saved as a variable. The proper
+# encrypt or decrypt method would be called, performing the requested operation before exiting.
+
 def encrypt(string)
 counter = 0 
   while counter < string.length 
@@ -37,15 +41,48 @@ counter = 0
 	end
 end 
 
-encrypt ("abc")
-puts ""
-encrypt ("zed")
-puts ""
-decrypt ("bcd")
-puts "" 
-decrypt ("afe")
-puts ""
-decrypt (encrypt("swordfish"))
+=begin
+until enc_dec_valid
+	puts "Greetings. Would you like to 'encode' or 'decode' a password?"
+	user_op = gets.chomp
+		if user_op == ("encode") or ("decode")
+			enc_dec_valid = true
+		else
+			puts "Invalid entry"
+			enc_dec_valid = false 
+		end 
+end 
+=end
+
+enc_dec_valid = false 
+until enc_dec_valid
+	puts "Encode or decode"
+	user_op = gets.chomp
+		if user_op == "encode" or user_op == "decode"
+			enc_dec_valid = true
+		else 
+			puts "Encode or decode, asshole"
+			enc_dec_valid = false
+		end
+end
+
+puts "Enter your password:"
+password = gets.chomp
+	if user_op == "encode"
+		encrypt (password)
+		elsif user_op == "decode"
+			decrypt (password)
+	end 		
+
+# encrypt ("abc")
+# puts ""
+# encrypt ("zed")
+# puts ""
+# decrypt ("bcd")
+# puts "" 
+# decrypt ("afe")
+# puts ""
+# decrypt (encrypt("swordfish"))
 
 # decrypt(encrypt("swordfish")) on line 42 does not work, and I'm not entirely sure why. Because the
 # encrypt method is called withing parenthesis, that should be evaluated first. When it is encoded
