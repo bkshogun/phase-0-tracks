@@ -33,11 +33,22 @@ def decrypt(string)
 	alpha_reverse = alpha.reverse 
 	counter = 0 
 	while counter < string.length 
-  		string_enc = string[counter].next[-1]
+  		string_enc = string[counter].next
   		print string_enc
   		counter += 1 
   	end
 end 
+
+counter = 0
+def decrypt(string)
+	while counter < string.length
+		string[counter] = var1
+		var1 = (var1.ord - 1).chr 
+		puts va1 
+		counter += 1
+	end
+end 
+
 
 encrypt ("abc")
 encrypt ("zed")
