@@ -7,13 +7,6 @@
 # a string variable. Then, we can call the .reverse and .next methods on the variable, along with an index to 
 # reverse the process. 
 
-=begin
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-
-password = gets.chomp
-index = 0
-=end 
-
 counter = 0
 
 def encrypt(string)
@@ -29,23 +22,17 @@ def encrypt(string)
 end 
 
 def decrypt(string)
-	alpha = "abcdefghijklmnopqrstuvwxyz"
-	alpha_reverse = alpha.reverse 
-	counter = 0 
-	while counter < string.length 
-  		string_enc = string[counter].next
-  		print string_enc
-  		counter += 1 
-  	end
-end 
-
+	
 counter = 0
-def decrypt(string)
 	while counter < string.length
-		string[counter] = var1
-		var1 = (var1.ord - 1).chr 
-		puts va1 
-		counter += 1
+		var1 = string[counter]
+		var2 = (var1.ord - 1).chr 
+		if 
+			var2 == "`"
+			var2 = "z"
+		end
+	print var2
+	counter += 1
 	end
 end 
 
