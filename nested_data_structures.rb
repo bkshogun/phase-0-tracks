@@ -25,3 +25,10 @@ nl = {
     rockies: []
   }
 }
+
+puts nl[:nl_west][:dodgers][0]
+puts nl[:nl_east][:mets].length 
+puts nl[:nl_central][:name]
+p nl[:nl_east][:braves]
+nl[:nl_east][:braves] << "Colon"
+p nl[:nl_east][:braves]
