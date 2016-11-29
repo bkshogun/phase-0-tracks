@@ -47,7 +47,7 @@ p sharks
 
 sharks.delete_if {|shark| shark.include? "s" }
 
-puts "Shark after those species containing the letter "s" were removed, using .delete_if and .include in the block"
+puts "Shark after those species containing the letter 's' were removed, using .delete_if and .include in the block"
 p sharks
 
 
@@ -63,5 +63,5 @@ keep_num do
 	numbers.keep_if {|n| n > 5}
 end 
 
-puts "Array after method call to keep only numbers greater than five: #{numbers}"
+puts "Array after method call .keep_if to keep only numbers greater than five: #{numbers}"
 
