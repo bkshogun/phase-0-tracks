@@ -6,6 +6,7 @@ getSchwifty = true
 function reverse(txt) {
 
 var txt = txt.split("");
+console.log(txt.length);
 
 var reverseTxt = txt.reverse();
 
@@ -20,3 +21,4 @@ console.log(reverse("Schwifty"));
 }
 
 // However, it seems that there's a much easier way to do it. 
+
