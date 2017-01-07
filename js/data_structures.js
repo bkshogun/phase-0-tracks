@@ -18,8 +18,8 @@ function Car(make, model, copMagnet) {
 	this.make = make;
 	this.model = model;
 	this.copMagnet = copMagnet;
-	this.boom = function() { console.log("BOOM!");};		//figure out how to make these not print
-	this.vroom = function() { console.log("VROOOOOOM");}; 	//nor this one 
+	this.boom = function() { console.log("BOOM!");};		//figure out how to make this not print
+	this.vroom = function() { console.log("VROOOOOOM");}; 	//nor this
 }
 
 console.log("Building car...");
