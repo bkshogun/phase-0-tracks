@@ -2,6 +2,10 @@
 // and get the last indexed character, and push it to the 0-index position.
 // I would loop that until the length of the string is reached. 
 
+// Iterate through the array, beginning with the last position, found by getting
+// the length of the array iterating though, subtracting one each time, and pushing
+// the letter at that index position into a new array
+
 getSchwifty = true 
 function reverse(txt) {
 
