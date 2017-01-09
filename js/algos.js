@@ -1,44 +1,32 @@
-// If I'm trying to find the longest string in an array, that would mean the string
-// with the most characters
+// To find the longest string in an array of strings, the cleanest method would be to 
+// iterate through the array, comparing the length of each string to the prior string, 
+// and assigning a variable in the iteration loop to store the current longest string 
 
-// Iterate through the array, splitting it into individual strings and Use a function 
-// that counts the letters in a given string
+var wordArray = ["red", "orange", "green", "blue"];
+var longWord = ""
 
-var array1 = ["red", "orange", "green", "blue"];
-
-var array2 = [1, 2, 3, 4];
-
-var array3 = [1, 2, "red", "orange"];
-
-for (var i = 0; i < array1.length; i++) {
-	var strLength = (array1[i].length); 
- 	array1[i] = strLength;
-	
-}
-console.log (array1)
-// Assign a length to the string and push into a new data structure, similar to a 
-// key/value pair in a hash
-
-// Sort the new data structure by value
-
-// Extract the indexed position, either first or last based on sort order
+for (i = 0; i < wordArray.length; i++) {
+  if (wordArray[i].length > longWord.length);
+  longWord = wordArray[i];
+ }
+console.log(longWord);
 
 
+var person1 = {name: "Sabrina", age: 19
+};
 
-// One way, albeit inefficient, would be to add the lengths of two arrays and 
-// return sum1. Then, combine the two arrays but keep only the unique values. 
-// The length of the new array can be sum2. If sum1 equals sum2, there are no
-// duplicated elements in the array, and vise-versa... but just now realizing 
-// that is not what the asignment is asking. 
+var person2 = {name: "Mike D",age: 30
+};
 
-var matchString = false
+var person3 = {name: "Batman", age: 30
+};
 
-//if (... == ...) {
-//	matchString = true
-//} else {
-//	matchString = false
-//}
+console.log(person1)
 
+// Logically, as compared to Ruby, the most straightforward way would be to make a series
+// of conditional statements, and extracting each element of the pair, and use OR or || operators
+// combined with == equality operators to check for a match, returning true if any were matched. Still
+// figuring out how to do that in javascript...
 
 
 
