@@ -1,0 +1,37 @@
+sqlite> select * from family;
+1|Great-grandpa Pietro|1886|Sicily|1
+2|Great-grandma Giuseppa|1893|Sicily|2
+3|Great-grandpa Donald|1898|Scotland|1
+4|Great-grandma Katie O'Shea|1900|Ireland|2
+
+sqlite> update family set year_born = 1902 where id = 4;
+sqlite> select * from family;
+1|Great-grandpa Pietro|1886|Sicily|1
+2|Great-grandma Giuseppa|1893|Sicily|2
+3|Great-grandpa Donald|1898|Scotland|1
+4|Great-grandma Katie O'Shea|1902|Ireland|2
+
+sqlite> update family set name = "Donald MacGregor" where id = 3;
+sqlite> select * from family;
+1|Great-grandpa Pietro|1886|Sicily|1
+2|Great-grandma Giuseppa|1893|Sicily|2
+3|Donald MacGregor|1898|Scotland|1
+4|Great-grandma Katie O'Shea|1902|Ireland|2
+
+sqlite> select * from family, gender where family.gender_id = gender.id;
+1|Great-grandpa Pietro|1886|Sicily|1|1|male
+2|Great-grandma Giuseppa|1893|Sicily|2|2|female
+3|Great-grandpa Donald|1898|Scotland|1|1|male
+4|Great-grandma Katie O'Shea|1902|Ireland|2|2|female
+
+sqlite> select family.name, gender.gender from family join gender on family.gender_id = gender.id;
+Great-grandpa Pietro|male
+Great-grandma Giuseppa|female
+Great-grandpa Donald|male
+Great-grandma Katie O'Shea|female
+
+sqlite> delete from family where name = "Donald MacGregor";
+sqlite> select * from family;
+1|Great-grandpa Pietro|1886|Sicily|1
+2|Great-grandma Giuseppa|1893|Sicily|2
+4|Great-grandma Katie O'Shea|1902|Ireland|2
