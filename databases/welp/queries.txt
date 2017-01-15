@@ -1,0 +1,41 @@
+## JOIN THREE TABLES ##
+
+sqlite> select * FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON reviews.business_id = businesses.id;
+1|Bradford|Pitt|1|5|Sweet marriage dude!|1|1|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling|2|1|Amir a bitch|2|2|2|Amir's Towing
+3|Angela|Jolie|3|5|Bartender Mikey D is a hottie!|3|3|3|The Beagle Nightclub
+4|Steven|Wonder|4|3|Could be great, I dunno. Can't see|4|4|4|Lotus Yoga
+5|Holly|Berry|5|4|Janet cleans my pipes like a pro!|5|5|5|Plumbing by Janet
+6|Merryl|Streepman|6|2|Sushi overratted!|6|6|6|Sushi World
+7|Denzel|George|7|5|JoeBob knocks it outta the park!|7|7|7|JoeBob's Sportz Barn
+
+
+## JOIN FIRST NAME, REVIEW, BUSINESS NAME ##
+
+sqlite> select users.first_name, reviews.comment, businesses.name FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON reviews.business_id = businesses.id;
+Bradford|Sweet marriage dude!|Grundy Hollow Wedding Chapel
+Mandy|Amir a bitch|Amir's Towing
+Angela|Bartender Mikey D is a hottie!|The Beagle Nightclub
+Steven|Could be great, I dunno. Can't see|Lotus Yoga
+Holly|Janet cleans my pipes like a pro!|Plumbing by Janet
+Merryl|Sushi overratted!|Sushi World
+Denzel|JoeBob knocks it outta the park!|JoeBob's Sportz Barn
+
+
+## JOIN USER NAME, BUSINESS NAME, STAR RATING, COMMENT ##
+
+sqlite> select users.first_name, reviews.stars, reviews.comment, businesses.name FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON reviews.business_id = businesses.id;
+Bradford|5|Sweet marriage dude!|Grundy Hollow Wedding Chapel
+Mandy|1|Amir a bitch|Amir's Towing
+Angela|5|Bartender Mikey D is a hottie!|The Beagle Nightclub
+Steven|3|Could be great, I dunno. Can't see|Lotus Yoga
+Holly|4|Janet cleans my pipes like a pro!|Plumbing by Janet
+Merryl|2|Sushi overratted!|Sushi World
+Denzel|5|JoeBob knocks it outta the park!|JoeBob's Sportz Barn
+
+
+## VIEW DATA FROM ALL THREE TABLES FROM ONE PARTICULAR BUSINESS ##
+
+sqlite> select users.first_name, reviews.stars, reviews.comment, businesses.name FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON reviews.business_id = businesses.id WHERE businesses.id = 3;
+Angela|5|Bartender Mikey D is a hottie!|The Beagle Nightclub
+Holly|5|Mikey D is the coolest!|The Beagle Nightclub
