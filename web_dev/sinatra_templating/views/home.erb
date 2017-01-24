@@ -7,10 +7,11 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
-  <ul>
+  <p>Click <a href="students/beer_pref">here</a> to tell us your favorite beer.</p>
+  <ol>
     <% @students.each do |student| %>
       <li><%= student['name'] %>, <%= student['age'] %></li>
     <% end %>
-  </ul>
+  </ol>
 </body>
 </html>
