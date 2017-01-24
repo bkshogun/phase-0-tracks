@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#red").click(function(){
+        $("#div1").fadeIn();
+    });
+    $("#blue").click(function(){
+        $("#div2").fadeIn();
+    });
+    $("#green").click(function(){
+        $("#div3").fadeIn();
+    });
+});
+
+</script>
+</head>
+<body>
+
+<button id="red">Click for Red</button>
+<button id="blue">Click for Blue</button>
+<button id="green">Click for Green</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:blue;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+
+</body>
+</html>
